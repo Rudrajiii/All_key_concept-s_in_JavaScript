@@ -19,7 +19,7 @@ function promise_url(method , requested_url){
 }
 promise_url('GET',fetch_item)
 .then((response)=>{
-    // console.log(typeof response); //*String
+    // console.log(typeof response); //*String //*json === response*//
     response = JSON.parse(response);
     // console.log(typeof response); //*Object
     return response;
