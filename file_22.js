@@ -1,12 +1,13 @@
+import { exportableFunc } from "./file_23.js";
 const product_api = "https://jsonplaceholder.typicode.com/posts";
 
 async function getPromise(){
     let result = await fetch(product_api);
     let data = await result.json();
     return data;
-    
 }
 getPromise().then(r => console.log(r));
+
 
 const walkDog = () => {
     return new Promise((resolve, reject) =>{
@@ -60,3 +61,6 @@ async function display_results(){
 }
 display_results();
 
+
+const pickFunc = exportableFunc([-5 , 4 , 5 , 6 , 10 , 11] , 6);
+console.log(pickFunc);
